@@ -103,6 +103,7 @@ body:scroll {
 
 /* Landing component styling and animations */
 .landing-container {
+  padding: 0 !important;
   position: relative;
   width: 100%;
   height: 75vH;
@@ -111,6 +112,40 @@ body:scroll {
 
 .landing-container > * {
   position: absolute;
+}
+
+.landing-bar {
+  height: 20px;
+  width: 100%;
+  background-color: black;
+  background-image: linear-gradient(to right, grey 0%, white 100%);
+}
+
+.circle-container, .job-title {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+  justify-content: center;
+  text-align: center;
+}
+
+.job-title {
+  z-index: 1;
+}
+
+.circle-image {
+  width: 100%;
+  height: auto;
+}
+
+.image-bar {
+  font-size: 1em;
+}
+
+.image-bar img {
+  height: 100px;
+  width: auto;
 }
 
 .pageTitle {
