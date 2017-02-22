@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "c5f6f89c896533c23a86"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0531d7b2c869270cfeeb"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -991,7 +991,7 @@ var LandingComponent = function (_Component) {
     value: function pageTitle() {
       return _react2.default.createElement(
         'div',
-        { className: 'pageTitle' },
+        { className: 'page-title' },
         _react2.default.createElement(
           'span',
           null,
@@ -1010,17 +1010,34 @@ var LandingComponent = function (_Component) {
     value: function jobTitle() {
       return _react2.default.createElement(
         'div',
-        { className: 'jobTitle' },
+        { className: 'job-title' },
         _react2.default.createElement(
           'span',
           null,
-          'Full stack'
-        ),
-        _react2.default.createElement('br', null),
-        _react2.default.createElement(
-          'span',
-          null,
+          'Full stack',
+          _react2.default.createElement('br', null),
           'developer'
+        )
+      );
+    }
+  }, {
+    key: 'circleImage',
+    value: function circleImage() {
+      return _react2.default.createElement('img', { className: 'circle-image', src: 'http://i.imgur.com/jBExftp.png' });
+    }
+  }, {
+    key: 'imageBar',
+    value: function imageBar() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'image-bar' },
+        'Made with',
+        _react2.default.createElement(
+          'div',
+          null,
+          _react2.default.createElement('img', { id: 'css3', src: 'http://i.imgur.com/Ti4jtiW.png' }),
+          _react2.default.createElement('img', { id: 'html5', src: 'http://i.imgur.com/iooM79o.png' }),
+          _react2.default.createElement('img', { id: 'react', src: 'http://i.imgur.com/vadN1e6.png' })
         )
       );
     }
@@ -1030,8 +1047,11 @@ var LandingComponent = function (_Component) {
       return _react2.default.createElement(
         'div',
         { className: 'landing-container' },
+        _react2.default.createElement('div', { className: 'landing-bar' }),
         this.pageTitle(),
-        this.jobTitle()
+        this.jobTitle(),
+        this.circleImage(),
+        this.imageBar()
       );
     }
   }]);
@@ -1157,17 +1177,17 @@ var NavBar = function (_Component) {
             'Connect with me:',
             _react2.default.createElement(
               'a',
-              null,
+              { href: 'https://www.linkedin.com/in/emmeline-lan' },
               'LinkedIn'
             ),
             _react2.default.createElement(
               'a',
-              null,
+              { href: 'https://angel.co/emmeline-lan' },
               'Angelist'
             ),
             _react2.default.createElement(
               'a',
-              null,
+              { href: 'https://github.com/bloodymushroom' },
               'Github'
             )
           )
