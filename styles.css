@@ -45,6 +45,33 @@ body:scroll {
   padding: 10px 0px 10px 0px;
 }
 
+/* Tooltip styling */
+.tooltip {
+  z-index: 1;
+  position: absolute;
+  right: 5px;
+  border: 3px black solid;
+  height: 70px;
+  width: 140px;
+  border-radius: 15px 15px 15px 0px;
+  box-shadow: 5px 5px 5px grey;
+  background-color: yellow;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  opacity: 0.7;
+  transition: opacity 0.1s;
+}
+
+.tooltip-content {
+  word-wrap: break-word;
+  color: black;
+  font-size: 1.5em;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 2px grey;
+}
 
 /* header panel styling */
 .header-container {
@@ -105,6 +132,16 @@ body:scroll {
 }
 
 /* Landing component styling and animations */
+@keyframes barEnter {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  },
+  100% {
+    transform: translateX(0%);
+  }
+}
+
 .landing-container {
   margin-top: 100px;
   padding: 0 !important;
@@ -117,6 +154,8 @@ body:scroll {
 
 .landing-container > * {
   position: absolute;
+  animation-iteration-count: 1;
+  animation-duration: 0.5s;
 }
 
 .page-title {
@@ -133,6 +172,9 @@ body:scroll {
   background-color: black;
   background-image: linear-gradient(to right, black 0%, blue 20%, purple 40%, red 60%, yellow 80%, white 100%);
   opacity: 0.7;
+
+  animation-name: barEnter;
+  animation-duration: 2s;
 }
 
 .circle-container, .job-title {
@@ -268,6 +310,7 @@ body:scroll {
 
 /* ProjectsGallery Style */
 .panels {
+  position: relative;
   background: linear-gradient(grey, white, grey);
   height: 70vh;
   overflow: hidden;
@@ -423,8 +466,8 @@ body:scroll {
 }
 
 .cat > *:hover {
-  transition: transform 1s;
-  font-size: 1.4em;
+  transition: all 0.2s;
+  font-size: 1.5em;
 }
 
 .cat-1 {

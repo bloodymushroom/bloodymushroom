@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "0130d3424c8f88d9c45d"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "eb65cdcc737bc1a513ab"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -899,6 +899,10 @@ var _LandingComponent = __webpack_require__("./components/LandingComponent.js");
 
 var _LandingComponent2 = _interopRequireDefault(_LandingComponent);
 
+var _Tooltip = __webpack_require__("./components/Tooltip.js");
+
+var _Tooltip2 = _interopRequireDefault(_Tooltip);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1477,6 +1481,10 @@ var _index6 = _interopRequireDefault(_index5);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _Tooltip = __webpack_require__("./components/Tooltip.js");
+
+var _Tooltip2 = _interopRequireDefault(_Tooltip);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1511,16 +1519,33 @@ function _wrapComponent(id) {
   };
 }
 
+//components 
+
+
 var ProjectsGallery = _wrapComponent('ProjectsGallery')(function (_Component) {
   _inherits(ProjectsGallery, _Component);
 
   function ProjectsGallery(props) {
     _classCallCheck(this, ProjectsGallery);
 
-    return _possibleConstructorReturn(this, (ProjectsGallery.__proto__ || Object.getPrototypeOf(ProjectsGallery)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (ProjectsGallery.__proto__ || Object.getPrototypeOf(ProjectsGallery)).call(this, props));
+
+    _this.state = {
+      shouldTip: true
+    };
+
+    _this.removeTip = _this.removeTip.bind(_this);
+    return _this;
   }
 
   _createClass(ProjectsGallery, [{
+    key: 'removeTip',
+    value: function removeTip() {
+      this.setState({
+        shouldTip: false
+      });
+    }
+  }, {
     key: 'componentDidMount',
     value: function componentDidMount() {
       var panels = document.querySelectorAll('.panel');
@@ -1547,7 +1572,8 @@ var ProjectsGallery = _wrapComponent('ProjectsGallery')(function (_Component) {
     value: function render() {
       return _react3.default.createElement(
         'div',
-        { className: 'panels' },
+        { onClick: this.removeTip, className: 'panels' },
+        this.state.shouldTip && _react3.default.createElement(_Tooltip2.default, { style: { opacity: 1, top: '35%', right: '25%' }, content: 'Select a panel!' }),
         _react3.default.createElement(
           'div',
           { className: 'panel panel-1' },
@@ -1748,7 +1774,6 @@ var SkillCharts = _wrapComponent('SkillCharts')(function (_Component) {
                 this.languagesChart();
             } else if (this.props.activeChart === 'Frameworks') {
                 this.frameworksChart();
-                console.log('other chart');
             } else if (this.props.activeChart === 'BackEnd') {
                 this.backEndChart();
             } else {
@@ -1942,6 +1967,10 @@ var _index6 = _interopRequireDefault(_index5);
 
 var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
 
+var _Tooltip = __webpack_require__("./components/Tooltip.js");
+
+var _Tooltip2 = _interopRequireDefault(_Tooltip);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1976,16 +2005,33 @@ function _wrapComponent(id) {
   };
 }
 
+//components
+
+
 var SkillsSpinner = _wrapComponent('SkillsSpinner')(function (_Component) {
   _inherits(SkillsSpinner, _Component);
 
   function SkillsSpinner(props) {
     _classCallCheck(this, SkillsSpinner);
 
-    return _possibleConstructorReturn(this, (SkillsSpinner.__proto__ || Object.getPrototypeOf(SkillsSpinner)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (SkillsSpinner.__proto__ || Object.getPrototypeOf(SkillsSpinner)).call(this, props));
+
+    _this.state = {
+      shouldTip: true
+    };
+
+    _this.removeTip = _this.removeTip.bind(_this);
+    return _this;
   }
 
   _createClass(SkillsSpinner, [{
+    key: 'removeTip',
+    value: function removeTip() {
+      this.setState({
+        shouldTip: false
+      });
+    }
+  }, {
     key: 'transformDivs',
     value: function transformDivs(n, str) {
       this.props.setActiveChart(str);
@@ -2008,7 +2054,8 @@ var SkillsSpinner = _wrapComponent('SkillsSpinner')(function (_Component) {
 
       return _react3.default.createElement(
         'div',
-        null,
+        { style: { position: 'relative' }, onClick: this.removeTip },
+        this.state.shouldTip && _react3.default.createElement(_Tooltip2.default, { content: 'Click a category!' }),
         _react3.default.createElement(
           'div',
           { className: 'transformer' },
@@ -2122,6 +2169,114 @@ var _temp = function () {
 }();
 
 ;
+
+/***/ }),
+
+/***/ "./components/Tooltip.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = __webpack_require__("./node_modules/redbox-react/lib/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = __webpack_require__("./node_modules/react-transform-catch-errors/lib/index.js");
+
+var _index4 = _interopRequireDefault(_index3);
+
+var _react2 = __webpack_require__("./node_modules/react/react.js");
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index5 = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
+
+var _index6 = _interopRequireDefault(_index5);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  Tooltip: {
+    displayName: 'Tooltip'
+  }
+};
+
+var _UsersElanProjectsPortfolioNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
+  filename: '/Users/elan/Projects/portfolio/components/Tooltip.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+var _UsersElanProjectsPortfolioNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
+  filename: '/Users/elan/Projects/portfolio/components/Tooltip.js',
+  components: _components,
+  locals: [],
+  imports: [_react3.default, _index2.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _UsersElanProjectsPortfolioNode_modulesReactTransformHmrLibIndexJs2(_UsersElanProjectsPortfolioNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+  };
+}
+
+var Tooltip = _wrapComponent('Tooltip')(function (_Component) {
+  _inherits(Tooltip, _Component);
+
+  function Tooltip(props) {
+    _classCallCheck(this, Tooltip);
+
+    return _possibleConstructorReturn(this, (Tooltip.__proto__ || Object.getPrototypeOf(Tooltip)).call(this, props));
+  }
+
+  _createClass(Tooltip, [{
+    key: 'render',
+    value: function render() {
+      return _react3.default.createElement(
+        'div',
+        { style: this.props.style || {}, className: 'tooltip' },
+        _react3.default.createElement(
+          'span',
+          { className: 'tooltip-content' },
+          this.props.content
+        )
+      );
+    }
+  }]);
+
+  return Tooltip;
+}(_react2.Component));
+
+var _default = Tooltip;
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(Tooltip, 'Tooltip', '/Users/elan/Projects/portfolio/components/Tooltip.js');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/elan/Projects/portfolio/components/Tooltip.js');
+}();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/webpack/buildin/module.js")(module)))
 
 /***/ }),
 
