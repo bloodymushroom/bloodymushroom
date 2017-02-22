@@ -15,16 +15,16 @@
 
 :root {
   --margin-all: 76px;
+  --main-light: #B0BEC5;
+  --main-color: #607D8B;
+  --main-dark: #263238;
+  --secondary-color: #FFC107;
+  --secondary-light: #FFD54F;
 };
 
 html, body {
   width: 100%;
 }
-
-body:scroll {
-  background-color: lightgrey;
-}
-
 
 /* main styling*/
 .main-container {
@@ -32,6 +32,7 @@ body:scroll {
   display: block;
   font-family:"Roboto", cursive, sans-serif;
   padding-top: 100px;
+  background-color: white;
 }
 
 .main-container > *:not(.navbar) {
@@ -40,7 +41,7 @@ body:scroll {
 
 .filler {
   height: 40vh;
-  background-color: lightgrey;
+  background-color: var(--main-light);
   display: flex;
   padding: 10px 0px 10px 0px;
 }
@@ -50,27 +51,22 @@ body:scroll {
   z-index: 1;
   position: absolute;
   right: 5px;
-  border: 3px black solid;
   height: 70px;
   width: 140px;
   border-radius: 15px 15px 15px 0px;
   box-shadow: 5px 5px 5px grey;
-  background-color: yellow;
+  background-color: var(--secondary-light);
   display: flex;
   flex-direction: column;
   justify-content: center;
-  flex-wrap: wrap;
-  opacity: 0.7;
-  transition: opacity 0.1s;
 }
 
 .tooltip-content {
   word-wrap: break-word;
   color: black;
-  font-size: 1.5em;
+  font-size: 1em;
   text-align: center;
   font-weight: bold;
-  text-shadow: 1px 1px 2px grey;
 }
 
 /* header panel styling */
@@ -81,6 +77,7 @@ body:scroll {
 }
 
 .main-header {
+  color: var(--main-dark);
   font-size: 3em;
   font-weight: bold;
 }
@@ -90,12 +87,16 @@ body:scroll {
 }
 
 .header-detail {
+  color: var(--main-color);
   font-size: 2em;
   flex: 2;
 }
 
 .spec-button {
+  background-color: var(--secondary-color);
   transition: all 0.2s;
+  font-size: 1.4em;
+  border-radius: 10px;
   height: 80px;
   box-shadow: 3px 3px 5px grey;
 }
@@ -125,11 +126,7 @@ body:scroll {
   flex: 1;
 }
 
-.spec-button {
-  font-size: 1.4em;
-  border-radius: 10px;
-  border: none;
-}
+
 
 /* Landing component styling and animations */
 @keyframes barEnter {
@@ -143,8 +140,7 @@ body:scroll {
 }
 
 .landing-container {
-  margin-top: 100px;
-  padding: 0 !important;
+  padding: 100px 0 0 0 !important;
   position: relative;
   width: 100%;
   height: 75vH;
@@ -232,7 +228,8 @@ body:scroll {
   display: flex;
   height: 110px;
   padding-top: 30px;
-  background-color: white;
+  color: var(--main-light);
+  background-color: var(--main-dark);
   z-index: 2;
   /* animation on load */
   animation-name: dropHeader;
@@ -251,8 +248,14 @@ body:scroll {
 
 .navitem a {
   transition: all 0.2s;
-  color: black;
+  color: var(--secondary-color);
   text-decoration: none;
+}
+
+.nav-icon {
+  height: 30px;
+  width: auto;
+  margin-right: 5px;
 }
 
 .navitem > * {
@@ -278,13 +281,12 @@ body:scroll {
 
 .logo {
   margin-left: var(--margin-all);
-  width: 80px;
-  height: 80px;
+  width: 90px;
+  height: 90px;
   background-image: url('https://i.imgur.com/MJdvfak.jpg');
   background-size: cover;
   background-position: center;
   border-radius: 100%;
-  box-shadow: 2px 2px 2px grey;
 }
 
 .left {
@@ -292,7 +294,7 @@ body:scroll {
 }
 
 .title {
-  color: black;
+  color: var(--secondary-color);
   font-family: 'Pacifico';
   font-size: 2em;
 }
@@ -458,7 +460,7 @@ body:scroll {
 }
 
 .cat > * {
-  transition: transform 1s font-size 0.5s;
+  transition: font-size 0.5s;
   font-size: 1.2em;
   text-shadow: 2px 2px 5px black;
   color: white;
