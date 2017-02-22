@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "73daee2227c5fbc046db"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "0130d3424c8f88d9c45d"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1032,7 +1032,33 @@ var App = _wrapComponent('App')(function (_Component) {
           buttonName: content.about.buttonName,
           clickHandler: content.about.clickHandler
         }),
-        _react3.default.createElement('div', { className: 'filler' })
+        _react3.default.createElement(
+          'div',
+          { className: 'filler' },
+          _react3.default.createElement('div', { style: { margin: '20px 0 20px 0', flex: 1, borderRight: '3px solid white' } }),
+          _react3.default.createElement(
+            'div',
+            { style: {
+                display: 'flex', flex: 1, flexDirection: 'column',
+                justifyContent: 'flex-end', fontSize: '2em', padding: '20px'
+              } },
+            _react3.default.createElement(
+              'span',
+              { style: { textAlign: 'right' } },
+              'Emmeline Lan'
+            ),
+            _react3.default.createElement(
+              'span',
+              { style: { textAlign: 'right' } },
+              'Emmeline.Lan@gmail.com'
+            ),
+            _react3.default.createElement(
+              'span',
+              { style: { textAlign: 'right' } },
+              '(510) 468-6002'
+            )
+          )
+        )
       );
     }
   }]);

@@ -39,8 +39,10 @@ body:scroll {
 }
 
 .filler {
-  height: 100vh;
+  height: 40vh;
   background-color: lightgrey;
+  display: flex;
+  padding: 10px 0px 10px 0px;
 }
 
 
@@ -267,7 +269,7 @@ body:scroll {
 /* ProjectsGallery Style */
 .panels {
   background: linear-gradient(grey, white, grey);
-  height: 50vh;
+  height: 70vh;
   overflow: hidden;
   display: flex;
 }
@@ -385,9 +387,9 @@ body:scroll {
   display: block;
   transition: transform 1s;
   position: relative;
-  height: 100px;
-  width: 100px;
-  border: 100px solid transparent;
+  height: 150px;
+  width: 150px;
+  border: 150px solid transparent;
   border-radius: 100%;
   background-image: url('http://i.imgur.com/drhSlkQ.png');
   background-size: 280%;
