@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "b72799933a489f7cfb34"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a17ff1ce5f42d687c1d6"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -727,6 +727,10 @@ var _react = __webpack_require__("./node_modules/react/react.js");
 
 var _react2 = _interopRequireDefault(_react);
 
+var _Tooltip = __webpack_require__("./components/Tooltip.js");
+
+var _Tooltip2 = _interopRequireDefault(_Tooltip);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -741,10 +745,37 @@ var HeaderPanel = function (_Component) {
   function HeaderPanel(props) {
     _classCallCheck(this, HeaderPanel);
 
-    return _possibleConstructorReturn(this, (HeaderPanel.__proto__ || Object.getPrototypeOf(HeaderPanel)).call(this, props));
+    var _this = _possibleConstructorReturn(this, (HeaderPanel.__proto__ || Object.getPrototypeOf(HeaderPanel)).call(this, props));
+
+    _this.state = {
+      showPopup: false
+    };
+
+    _this.clickInProgress = _this.clickInProgress.bind(_this);
+    return _this;
   }
 
   _createClass(HeaderPanel, [{
+    key: 'clickInProgress',
+    value: function clickInProgress() {
+      var _this2 = this;
+
+      var context = this;
+
+      if (!this.state.showPopup) {
+        this.setState({
+          showPopup: true
+        });
+
+        setTimeout(function () {
+
+          _this2.setState({
+            showPopup: false
+          });
+        }, 1500);
+      }
+    }
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -777,7 +808,8 @@ var HeaderPanel = function (_Component) {
           { className: 'header-link' },
           _react2.default.createElement(
             'button',
-            { onClick: this.props.clickHandler, className: 'spec-button' },
+            { onClick: this.clickInProgress, className: 'spec-button' },
+            this.state.showPopup && _react2.default.createElement(_Tooltip2.default, { style: { top: '0px', right: '-50px' }, content: 'Pending, please check back later' }),
             this.props.buttonName
           )
         )
@@ -864,7 +896,7 @@ var content = {
   },
   projects: {
     mainHeader: 'Projects',
-    headerDetail: 'Here are some of my projects! The apps were created with React with MobX state management or Angular Frameworks, hosted on Express server with a MySQL or MongoDB back end. Platforms include web, mobile, and Chrome extension.',
+    headerDetail: 'Here are some of my projects. Framworks include React with MobX and Angular. Platforms include web, mobile, and Chrome extension.',
     buttonName: 'See Project Details',
     clickHandler: function clickHandler() {
       return console.log('Projects');
@@ -1527,6 +1559,10 @@ var SkillCharts = function (_Component) {
                     }]
                 },
                 options: {
+                    title: {
+                        display: true,
+                        text: 'Languages'
+                    },
                     scales: {
                         yAxes: [{
                             ticks: {

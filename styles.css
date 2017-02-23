@@ -64,7 +64,7 @@ html, body {
 .tooltip-content {
   word-wrap: break-word;
   color: black;
-  font-size: 1em;
+  font-size: 16px;
   text-align: center;
   font-weight: bold;
 }
@@ -123,6 +123,7 @@ html, body {
 }
 
 .header-link {
+  position: relative;
   flex: 1;
 }
 
@@ -312,6 +313,7 @@ html, body {
 
 /* ProjectsGallery Style */
 .panels {
+  padding: 0 !important;
   position: relative;
   background: linear-gradient(grey, white, grey);
   height: 70vh;
@@ -420,11 +422,6 @@ html, body {
 .panel.open {
   flex: 4;
   font-size: 40px;
-}
-
-.cta {
-  color: white;
-  text-decoration: none;
 }
 
 /* transformer */
