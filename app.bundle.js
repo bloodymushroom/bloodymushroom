@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "62f91d9e5d2711932bce"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "29157d4380e44bed81da"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -711,6 +711,125 @@
 /************************************************************************/
 /******/ ({
 
+/***/ "./components/CardImageGallery.js":
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+/* WEBPACK VAR INJECTION */(function(module) {
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+
+var _index = __webpack_require__("./node_modules/redbox-react/lib/index.js");
+
+var _index2 = _interopRequireDefault(_index);
+
+var _index3 = __webpack_require__("./node_modules/react-transform-catch-errors/lib/index.js");
+
+var _index4 = _interopRequireDefault(_index3);
+
+var _react2 = __webpack_require__("./node_modules/react/react.js");
+
+var _react3 = _interopRequireDefault(_react2);
+
+var _index5 = __webpack_require__("./node_modules/react-transform-hmr/lib/index.js");
+
+var _index6 = _interopRequireDefault(_index5);
+
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+var _components = {
+  CardImageGallery: {
+    displayName: 'CardImageGallery'
+  }
+};
+
+var _UsersElanProjectsPortfolioNode_modulesReactTransformHmrLibIndexJs2 = (0, _index6.default)({
+  filename: '/Users/elan/Projects/portfolio/components/CardImageGallery.js',
+  components: _components,
+  locals: [module],
+  imports: [_react3.default]
+});
+
+var _UsersElanProjectsPortfolioNode_modulesReactTransformCatchErrorsLibIndexJs2 = (0, _index4.default)({
+  filename: '/Users/elan/Projects/portfolio/components/CardImageGallery.js',
+  components: _components,
+  locals: [],
+  imports: [_react3.default, _index2.default]
+});
+
+function _wrapComponent(id) {
+  return function (Component) {
+    return _UsersElanProjectsPortfolioNode_modulesReactTransformHmrLibIndexJs2(_UsersElanProjectsPortfolioNode_modulesReactTransformCatchErrorsLibIndexJs2(Component, id), id);
+  };
+}
+
+var CardImageGallery = _wrapComponent('CardImageGallery')(function (_Component) {
+  _inherits(CardImageGallery, _Component);
+
+  function CardImageGallery(props) {
+    _classCallCheck(this, CardImageGallery);
+
+    return _possibleConstructorReturn(this, (CardImageGallery.__proto__ || Object.getPrototypeOf(CardImageGallery)).call(this, props));
+  }
+
+  _createClass(CardImageGallery, [{
+    key: 'generateCard',
+    value: function generateCard(image, label) {
+      return _react3.default.createElement(
+        'div',
+        { className: 'card-container' },
+        'Gallery Coming Soon!'
+      );
+    }
+  }, {
+    key: 'render',
+    value: function render() {
+      return _react3.default.createElement(
+        'div',
+        { className: 'gallery-container' },
+        _react3.default.createElement('div', { className: 'arrow left-arrow' }),
+        _react3.default.createElement(
+          'div',
+          { className: 'gallery' },
+          this.generateCard()
+        ),
+        _react3.default.createElement('div', { className: 'arrow right-arrow' })
+      );
+    }
+  }]);
+
+  return CardImageGallery;
+}(_react2.Component));
+
+var _default = CardImageGallery;
+exports.default = _default;
+;
+
+var _temp = function () {
+  if (typeof __REACT_HOT_LOADER__ === 'undefined') {
+    return;
+  }
+
+  __REACT_HOT_LOADER__.register(CardImageGallery, 'CardImageGallery', '/Users/elan/Projects/portfolio/components/CardImageGallery.js');
+
+  __REACT_HOT_LOADER__.register(_default, 'default', '/Users/elan/Projects/portfolio/components/CardImageGallery.js');
+}();
+
+;
+/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__("./node_modules/webpack/buildin/module.js")(module)))
+
+/***/ }),
+
 /***/ "./components/HeaderPanel.js":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -847,7 +966,7 @@ var HeaderPanel = _wrapComponent('HeaderPanel')(function (_Component) {
           _react3.default.createElement(
             'button',
             { onClick: this.clickInProgress, className: 'spec-button' },
-            this.state.showPopup && _react3.default.createElement(_Tooltip2.default, { style: { top: '0px', right: '-50px' }, content: 'Pending, please check back later' }),
+            this.state.showPopup && _react3.default.createElement(_Tooltip2.default, { style: { top: '-80%', left: '60%' }, content: 'Pending, please check back later' }),
             this.props.buttonName
           )
         )
@@ -998,7 +1117,7 @@ var content = {
   },
   about: {
     mainHeader: 'About Me',
-    headerDetail: 'In addition to programming, I also have professional experience in the semiconductor, healthcare, and art industries.',
+    headerDetail: 'I have professional experience in the semiconductor, healthcare, and art industries and care deeply about engineering solutions that improve the lives of others. I also love painting and design!',
     buttonName: 'See Other Projects',
     clickHandler: function clickHandler() {
       return console.log('About');
@@ -1557,6 +1676,10 @@ var _jquery = __webpack_require__("./node_modules/jquery/dist/jquery.js");
 
 var _jquery2 = _interopRequireDefault(_jquery);
 
+var _CardImageGallery = __webpack_require__("./components/CardImageGallery.js");
+
+var _CardImageGallery2 = _interopRequireDefault(_CardImageGallery);
+
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -1591,6 +1714,9 @@ function _wrapComponent(id) {
   };
 }
 
+//commponents
+
+
 var OtherExperience = _wrapComponent('OtherExperience')(function (_Component) {
   _inherits(OtherExperience, _Component);
 
@@ -1620,7 +1746,12 @@ var OtherExperience = _wrapComponent('OtherExperience')(function (_Component) {
           _react3.default.createElement(
             'span',
             { className: 'other-text' },
-            cat
+            cat.split(',')[0],
+            _react3.default.createElement(
+              'span',
+              { style: { fontStyle: 'italic' } },
+              cat.split(',')[1]
+            )
           )
         )
       );
@@ -1654,22 +1785,22 @@ var OtherExperience = _wrapComponent('OtherExperience')(function (_Component) {
           _react3.default.createElement(
             'div',
             { className: 'other-header' },
-            'Industries'
+            'Work Experience'
           ),
-          this.imageSlider('http://i.imgur.com/iFgIDevm.png', 'Pharmaceuticals and Data Analysis'),
-          this.imageSlider('http://i.imgur.com/tAhhLXPm.jpg', 'Semiconductor Processing'),
-          this.imageSlider('http://i.imgur.com/5teFoqH.png', 'Healthcare Management'),
-          this.imageSlider('http://i.imgur.com/3agxoSXm.png', 'Materials Engineering')
+          this.imageSlider('http://i.imgur.com/iFgIDevm.png', 'Case Manager,Pharmaceutical Data Analysis'),
+          this.imageSlider('http://i.imgur.com/tAhhLXPm.jpg', 'Developer,Semiconductor Processing'),
+          this.imageSlider('http://i.imgur.com/5teFoqH.png', 'Clinical Assistant,Healthcare Management'),
+          this.imageSlider('http://i.imgur.com/3agxoSXm.png', 'Bachelor of Science,Materials Engineering')
         ),
         _react3.default.createElement(
           'div',
-          { style: { width: '70%' }, className: 'other-cat' },
+          { style: { width: '68%', marginLeft: '2%' }, className: 'other-cat' },
           _react3.default.createElement(
             'div',
             { className: 'other-header' },
             'Art and Design'
           ),
-          _react3.default.createElement('div', null)
+          _react3.default.createElement(_CardImageGallery2.default, null)
         )
       );
     }
@@ -1817,7 +1948,7 @@ var ProjectsGallery = _wrapComponent('ProjectsGallery')(function (_Component) {
       return _react3.default.createElement(
         'div',
         { onClick: this.removeTip, className: 'panels' },
-        this.state.shouldTip && _react3.default.createElement(_Tooltip2.default, { style: { opacity: 1, top: '30%', right: '25%' }, content: 'Select a panel!' }),
+        false && _react3.default.createElement(_Tooltip2.default, { style: { opacity: 1, top: '30%', right: '25%' }, content: 'Select a panel!' }),
         _react3.default.createElement(
           'div',
           { className: 'panel panel-1' },
@@ -2007,6 +2138,11 @@ var SkillCharts = _wrapComponent('SkillCharts')(function (_Component) {
         _this.languagesChart = _this.languagesChart.bind(_this);
         _this.frameworksChart = _this.frameworksChart.bind(_this);
         _this.renderChart = _this.renderChart.bind(_this);
+
+        _this.state = {
+            labelSize: 18,
+            titleSize: 20
+        };
         return _this;
     }
 
@@ -2043,12 +2179,21 @@ var SkillCharts = _wrapComponent('SkillCharts')(function (_Component) {
                 options: {
                     title: {
                         display: true,
-                        text: 'Languages'
+                        text: 'Languages - Programming & Non-programming',
+                        fontSize: this.state.titleSize
                     },
                     scales: {
                         yAxes: [{
                             ticks: {
-                                beginAtZero: true
+                                beginAtZero: true,
+                                min: 0,
+                                max: 5,
+                                stepSize: 1
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                fontSize: this.state.labelSize
                             }
                         }]
                     }
@@ -2072,10 +2217,23 @@ var SkillCharts = _wrapComponent('SkillCharts')(function (_Component) {
                     }]
                 },
                 options: {
+                    title: {
+                        display: true,
+                        text: 'Front End Frameworks',
+                        fontSize: this.state.titleSize
+                    },
                     scales: {
                         yAxes: [{
                             ticks: {
-                                beginAtZero: true
+                                beginAtZero: true,
+                                min: 0,
+                                max: 5,
+                                stepSize: 1
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                fontSize: this.state.labelSize
                             }
                         }]
                     }
@@ -2099,10 +2257,23 @@ var SkillCharts = _wrapComponent('SkillCharts')(function (_Component) {
                     }]
                 },
                 options: {
+                    title: {
+                        display: true,
+                        text: 'Other Skills',
+                        fontSize: this.state.titleSize
+                    },
                     scales: {
                         yAxes: [{
                             ticks: {
-                                beginAtZero: true
+                                beginAtZero: true,
+                                min: 0,
+                                max: 5,
+                                stepSize: 1
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                fontSize: this.state.labelSize
                             }
                         }]
                     }
@@ -2126,10 +2297,23 @@ var SkillCharts = _wrapComponent('SkillCharts')(function (_Component) {
                     }]
                 },
                 options: {
+                    title: {
+                        display: true,
+                        text: 'Back End - Server and Database',
+                        fontSize: this.state.titleSize
+                    },
                     scales: {
                         yAxes: [{
                             ticks: {
-                                beginAtZero: true
+                                beginAtZero: true,
+                                min: 0,
+                                max: 5,
+                                stepSize: 1
+                            }
+                        }],
+                        xAxes: [{
+                            ticks: {
+                                fontSize: this.state.labelSize
                             }
                         }]
                     }
@@ -2152,11 +2336,7 @@ var SkillCharts = _wrapComponent('SkillCharts')(function (_Component) {
             return _react3.default.createElement(
                 'div',
                 { style: { marginLeft: '50px', flex: 1 } },
-                _react3.default.createElement(
-                    'h2',
-                    null,
-                    this.props.activeChart
-                ),
+                _react3.default.createElement('br', null),
                 this.props.activeChart === 'Languages' && _react3.default.createElement('canvas', { className: 'chart', id: 'languages' }),
                 this.props.activeChart === 'Frameworks' && _react3.default.createElement('canvas', { className: 'chart', id: 'frameworks' }),
                 this.props.activeChart === 'BackEnd' && _react3.default.createElement('canvas', { className: 'chart', id: 'backend' }),
