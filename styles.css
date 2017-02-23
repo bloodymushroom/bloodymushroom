@@ -78,7 +78,7 @@ html, body {
 
 .main-header {
   color: var(--main-dark);
-  font-size: 3em;
+  font-size: 2.75em;
   font-weight: bold;
 }
 
@@ -88,7 +88,7 @@ html, body {
 
 .header-detail {
   color: var(--main-color);
-  font-size: 2em;
+  font-size: 1.5em;
   flex: 2;
 }
 
