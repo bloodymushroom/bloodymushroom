@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "29157d4380e44bed81da"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "1ba33677fd2c08b19e8c"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1109,6 +1109,7 @@ var content = {
     }
   },
   projects: {
+    mainHeader: 'Projects',
     headerDetail: 'Here are some of my projects built with the tech mentioned above! Platforms include web, mobile, and Chrome extension.',
     buttonName: 'See Project Details',
     clickHandler: function clickHandler() {
