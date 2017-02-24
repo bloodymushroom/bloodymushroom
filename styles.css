@@ -436,13 +436,23 @@ html, body {
 }
 
 /* transformer */
+
+.transformer-container {
+  display: flex; 
+  position: 'relative';
+  height: 100%;
+  flex-direction: column;
+  justify-content: center;
+
+}
+
 .transformer {
   display: block;
   transition: transform 1s;
   position: relative;
-  height: 150px;
-  width: 150px;
-  border: 150px solid transparent;
+  height: 15vh;
+  width: 15vh;
+  border: 15vh solid transparent;
   border-radius: 100%;
   background-image: url('http://i.imgur.com/drhSlkQ.png');
   background-size: 280%;
@@ -477,7 +487,7 @@ html, body {
 
 .cat > *:hover {
   transition: all 0.2s;
-  font-size: 1.5em;
+  font-size: 1.3em;
 }
 
 .cat-1 {
