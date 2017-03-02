@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "f5f475f59eeadcd097d6"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "cf56a6bf30f5c1d634d5"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -754,6 +754,9 @@ var CardImageGallery = function (_Component) {
       );
     }
   }, {
+    key: 'testGallery',
+    value: function testGallery() {}
+  }, {
     key: 'render',
     value: function render() {
       return _react2.default.createElement(
@@ -1033,7 +1036,7 @@ var App = function (_Component) {
         }),
         _react2.default.createElement(
           'div',
-          { style: { display: 'flex' } },
+          { style: { display: 'flex', height: '50vh' } },
           _react2.default.createElement(_SkillsSpinner2.default, { setActiveChart: function setActiveChart(str) {
               return _this2.setActiveChart(str);
             }, activeChart: this.state.activeChart }),
@@ -1730,8 +1733,8 @@ var SkillCharts = function (_Component) {
         _this.renderChart = _this.renderChart.bind(_this);
 
         _this.state = {
-            labelSize: 18,
-            titleSize: 20
+            labelSize: 15,
+            titleSize: 10
         };
         return _this;
     }
@@ -1925,7 +1928,7 @@ var SkillCharts = function (_Component) {
         value: function render() {
             return _react2.default.createElement(
                 'div',
-                { style: { marginLeft: '50px', flex: 1 } },
+                { style: { position: 'relative', marginLeft: '50px', flex: 1 } },
                 _react2.default.createElement('br', null),
                 this.props.activeChart === 'Languages' && _react2.default.createElement('canvas', { className: 'chart', id: 'languages' }),
                 this.props.activeChart === 'Frameworks' && _react2.default.createElement('canvas', { className: 'chart', id: 'frameworks' }),
@@ -2019,11 +2022,11 @@ var SkillsSpinner = function (_Component) {
 
       return _react2.default.createElement(
         'div',
-        { style: { position: 'relative' }, onClick: this.removeTip },
-        this.state.shouldTip && _react2.default.createElement(_Tooltip2.default, { content: 'Click a category!' }),
+        { className: 'transformer-container', onClick: this.removeTip },
         _react2.default.createElement(
           'div',
           { className: 'transformer' },
+          this.state.shouldTip && _react2.default.createElement(_Tooltip2.default, { style: { top: '-150%', left: '60%' }, content: 'Click a category!' }),
           _react2.default.createElement(
             'div',
             { className: 'cat cat-1' },
