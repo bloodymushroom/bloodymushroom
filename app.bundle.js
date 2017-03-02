@@ -59,7 +59,7 @@
 /******/ 	
 /******/ 	
 /******/ 	var hotApplyOnUpdate = true;
-/******/ 	var hotCurrentHash = "cf56a6bf30f5c1d634d5"; // eslint-disable-line no-unused-vars
+/******/ 	var hotCurrentHash = "a7c0694f37543d5c1cf8"; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentModuleData = {};
 /******/ 	var hotMainModule = true; // eslint-disable-line no-unused-vars
 /******/ 	var hotCurrentParents = []; // eslint-disable-line no-unused-vars
@@ -1436,7 +1436,7 @@ var OtherExperience = function (_Component) {
           { className: 'other-image' },
           _react2.default.createElement('img', { src: url }),
           _react2.default.createElement('img', { style: { opacity: 0.5 },
-            src: 'http://i.imgur.com/brim1t3.png'
+            src: 'https://i.imgur.com/brim1t3.png'
           })
         ),
         _react2.default.createElement(
@@ -1486,10 +1486,10 @@ var OtherExperience = function (_Component) {
             { className: 'other-header' },
             'Work Experience'
           ),
-          this.imageSlider('http://i.imgur.com/iFgIDevm.png', 'Case Manager,Pharmaceutical Data Analysis'),
-          this.imageSlider('http://i.imgur.com/tAhhLXPm.jpg', 'Developer,Semiconductor Processing'),
-          this.imageSlider('http://i.imgur.com/5teFoqH.png', 'Clinical Assistant,Healthcare Management'),
-          this.imageSlider('http://i.imgur.com/3agxoSXm.png', 'Bachelor of Science,Materials Engineering')
+          this.imageSlider('https://i.imgur.com/iFgIDevm.png', 'Case Manager,Pharmaceutical Data Analysis'),
+          this.imageSlider('https://i.imgur.com/tAhhLXPm.jpg', 'Developer,Semiconductor Processing'),
+          this.imageSlider('https://i.imgur.com/5teFoqH.png', 'Clinical Assistant,Healthcare Management'),
+          this.imageSlider('https://i.imgur.com/3agxoSXm.png', 'Bachelor of Science,Materials Engineering')
         ),
         _react2.default.createElement(
           'div',
